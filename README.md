@@ -1,23 +1,9 @@
-[linuxserverurl]: https://linuxserver.io
-[forumurl]: https://forum.linuxserver.io
-[ircurl]: https://www.linuxserver.io/irc/
-[podcasturl]: https://www.linuxserver.io/podcast/
-[appurl]: http://www.maraschinoproject.com/
-[hub]: https://hub.docker.com/r/linuxserver/maraschino/
 
-[![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)][linuxserverurl]
-
-The [LinuxServer.io][linuxserverurl] team brings you another container release featuring easy user mapping and community support. Find us for support at:
-* [forum.linuxserver.io][forumurl]
-* [IRC][ircurl] on freenode at `#linuxserver.io`
-* [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
-
-# linuxserver/maraschino
-[![](https://images.microbadger.com/badges/version/linuxserver/maraschino.svg)](https://microbadger.com/images/linuxserver/maraschino "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/linuxserver/maraschino.svg)](https://microbadger.com/images/linuxserver/maraschino "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/maraschino.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/linuxserver/maraschino.svg)][hub][![Build Status](https://ci.linuxserver.io/buildStatus/icon?job=Docker-Builders/x86-64/x86-64-maraschino)](https://ci.linuxserver.io/job/Docker-Builders/job/x86-64/job/x86-64-maraschino/)
+# maraschino docker image
 
 Maraschino, a simple web interface to act as a nice overview/front page for my XBMC HTPC.
 
-[![maraschino](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/maraschino.png)][appurl]
+This is a fork of linuxserver.io's image
 
 ## Usage
 
@@ -33,7 +19,7 @@ linuxserver/maraschino
 
 ## Parameters
 
-`The parameters are split into two halves, separated by a colon, the left hand side representing the host and the right the container side. 
+`The parameters are split into two halves, separated by a colon, the left hand side representing the host and the right the container side.
 For example with a port -p external:internal - what this shows is the port mapping from internal to external of the container.
 So -p 8080:80 would expose port 80 from inside the container to be accessible from the host's IP on port 8080
 http://192.168.x.x:8080 would show you what's running INSIDE the container on port 80.`
@@ -67,7 +53,7 @@ The webui is found at port 7000.
 
 * To monitor the logs of the container in realtime `docker logs -f maraschino`.
 
-* container version number 
+* container version number
 
 `docker inspect -f '{{ index .Config.Labels "build_version" }}' maraschino`
 
@@ -75,13 +61,3 @@ The webui is found at port 7000.
 
 `docker inspect -f '{{ index .Config.Labels "build_version" }}' linuxserver/maraschino`
 
-## Versions
-
-+ **12.12.17:** Rebase to alpine 3.7.
-+ **21.07.17:** Internal git pull instead of at runtime.
-+ **25.05.17:** Rebase to alpine 3.6.
-+ **07.02.17:** Rebase to alpine 3.5.
-+ **14.10.16:** Add version layer information.
-+ **10.09.16:** Add layer badge to README.
-+ **29.08.16:** Rebase to alpine.
-+ **09.11.15:** Initial Release.
